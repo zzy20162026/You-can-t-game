@@ -1,146 +1,82 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>项目主页</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui, sans-serif;}
-:root{
-  --main:#2563eb;
-  --bg:#f8fafc;
-  --card:#ffffff;
-  --text:#1e293b;
-  --muted:#64748b;
-  --border:#e2e8f0;
-}
-body{background:var(--bg);color:var(--text);line-height:1.7;padding-top:64px;}
-/*导航栏*/
-nav{
-  position:fixed;top:0;left:0;width:100%;height:64px;
-  background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,0.08);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 max(16px,calc(50vw - 600px));z-index:999;
-}
-.logo{font-size:1.3rem;font-weight:bold;color:var(--main);}
-.nav-menu{display:flex;gap:24px;list-style:none;}
-.nav-menu a{color:var(--text);text-decoration:none;font-weight:500;transition:0.2s;}
-.nav-menu a:hover{color:var(--main);}
-.container{max-width:1200px;margin:0 auto;padding:48px 16px;}
-section{margin-bottom:64px;}
-h2{font-size:1.8rem;margin-bottom:20px;color:#0f172a;}
-/*简介区域*/
-.intro-box{background:var(--card);padding:32px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,0.05);}
-/*按钮样式*/
-.btn{
-  display:inline-block;padding:12px 28px;border-radius:10px;
-  background:var(--main);color:white;text-decoration:none;font-weight:500;
-  transition:0.25s; border:none;cursor:pointer;font-size:1rem;
-}
-.btn:hover{background:#1d4ed8;transform:translateY(-2px);box-shadow:0 6px 16px #2563eb40;}
-.btn-outline{background:transparent;border:2px solid var(--main);color:var(--main);}
-.btn-outline:hover{background:var(--main);color:white;}
-/*产品卡片*/
-.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;}
-.pro-card{background:var(--card);border-radius:16px;padding:24px;box-shadow:0 4px 12px rgba(0,0,0,0.05);}
-.pro-card h3{margin-bottom:10px;}
-.pro-card p{color:var(--muted);margin-bottom:16px;}
-/*底部统计*/
-.footer-stat{text-align:center;margin-top:80px;color:var(--muted);font-size:14px;}
-/*移动端适配*/
-@media(max-width:720px){
-  .nav-menu{gap:12px;}
-  .nav-menu a{font-size:0.9rem;}
-}
-</style>
+    <meta charset="UTF-8">
+    <title>You can't 官网</title>
+    <style>
+        * {margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+        body {
+            background: linear-gradient(135deg,#b8e0f8,#60a8e8);
+            min-height:100vh;
+        }
+        nav {
+            background:#ffffff;
+            padding:20px 0;
+            text-align:center;
+        }
+        nav a {
+            margin:0 16px;
+            font-size:18px;
+            color:#000;
+            text-decoration:none;
+        }
+        .container{
+            max-width:520px;
+            margin:30px auto;
+        }
+        .card{
+            background:#ffffffdd;
+            border-radius:16px;
+            padding:28px;
+            margin-bottom:24px;
+            text-align:center;
+        }
+        .btn-blue{
+            background:#2178ed;
+            color:white;
+            border:none;
+            padding:10px 24px;
+            border-radius:8px;
+            font-size:16px;
+            margin-top:12px;
+        }
+    </style>
 </head>
 <body>
-<!--导航-->
-<nav>
-  <div class="logo">我的项目</div>
-  <ul class="nav-menu">
-    <li><a href="#home">首页</a></li>
-    <li><a href="#about">简介</a></li>
-    <li><a href="#products">最新产品</a></li>
-    <li><a href="#Project">所有产品</a></li>
-    <li><a href="#join">加入我们</a></li>
-  </ul>
-</nav>
-<div class="container">
-  <!--首页横幅-->
-  <section id="home">
-    <h2>欢迎来到项目主页</h2>
-    <div style="margin:24px 0;display:flex;gap:16px;flex-wrap:wrap;">
-    </div>
-  </section>
-  <!--简介介绍-->
-  <section id="about">
-    <h2>项目简介</h2>
-    <div class="intro-box">
-      <p>大家好！我是不懂Python的Jerry个人主页</p>
-    </div>
-  </section>
-  <!--最新产品-->
-  <section id="products">
-    <h2>最新产品</h2>
-    <div class="product-grid">
-      <div class="pro-card">
-        <h3>User system tools</h3>
-        <p>User System Tools for Python</p>
-        <a class="btn" href="https://wwats.lanzouu.com/i7rOs46lttyj">网盘下载</a>
-      </div>
-      <div class="pro-card">
-        <h3>You can't</h3>
-        <p>一个非常难的关卡。</p>
-        <a class="btn" href="https://zzy20162026.github.io/You-can-t-game/">跳转官网</a>
-      </div>
-    </div>
-  </section>
+    <nav>
+        <a href="#home">主页</a>
+        <a href="#download">下载</a>
+        <a href="#support">支持</a>
+        <a href="#about">关于</a>
+    </nav>
+    <div class="container">
+        <div class="card" id="home">
+            <h1>欢迎来到 You can't 官网</h1>
+            <p style="margin-top:12px">这是You can't的项目网站</p>
+        </div>
+        <div class="card" id="download">
+            <h2>下载</h2>
+            <p style="margin-top:12px">You can't 正式版</p>
+	    <button class="btn-blue" onclick="window.location.href='https://wwats.lanzouu.com/b01bjo9g8f'">下载 You can't 1.1.0 密码：8nqx</button>
+	    <button class="btn-blue" onclick="window.location.href='https://wwats.lanzouu.com/b01bjn2bxc'">下载 You can't 1.0.0 密码：5thb</button>
 
-  <!--全部产品-->
-  <section id="Project">
-	<h2>全部产品</h2>
-    <div class="product-grid">
-      <div class="pro-card">
-        <h3>Z‑OS</h3>
-        <p>A OS</p>
-        <a class="btn">已下架</a>
-      </div>
-      <div class="pro-card">
-        <h3>You can't</h3>
-        <p>非常难得关卡</p>
-        <a class="btn" href="https://zzy20162026.github.io/You-can-t-game/">跳转官网</a>
-      </div>
-      <div class="pro-card">
-        <h3>Nova OS</h3>
-        <p>A OS(2)</p>
-        <a class="btn" >已下架</a>
-      </div>
-      <div class="pro-card">
-        <h3>User system tools</h3>
-        <p>User system tools for python</p>
-        <a class="btn" href="https://wwats.lanzouu.com/i7rOs46lttyj">网盘下载</a>
-      </div>
+                    </div>
+        <div class="card" id="support">
+            <h2>支持</h2>
+            <p style="margin-top:12px">2026年暂无</p>
+        </div>
+        <div class="card" id="about">
+            <h2>关于</h2>
+            <p style="margin-top:12px">这是一个坑人游戏</p>
+        </div>
     </div>
-  </section>
-
-  <!--加入我们区块-->
-  <section id="join">
-    <h2>加入我们</h2>
-    <div class="intro-box">
-      <p>如果你感兴趣，欢迎加入我们的mimi团队！！！。</p>
-      <div style="margin-top:20px;">
-        <a class="btn" href="https://message.bilibili.com/?spm_id_from=333.1387.0.0#/whisper/mid3690995380128358">立即加入</a>
-      </div>
-    </div>
-  </section>
-  <!--访问统计 不蒜子-->
-  <div class="footer-stat">
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">总访问量：<span id="busuanzi_value_site_pv"></span> 次</span>
+<!-- =====访问统计===== -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div style="text-align:center;margin-top:40px;color:#666;">
+    <span id="busuanzi_container_site_pv">本站总访问量：<span id="busuanzi_value_site_pv"></span> 次</span>
     &nbsp;&nbsp;
     <span id="busuanzi_container_site_uv">访客：<span id="busuanzi_value_site_uv"></span> 人</span>
-  </div>
 </div>
+
 </body>
 </html>
